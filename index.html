@@ -128,6 +128,7 @@
         }
 
         function hitungTotalHarga() {
+            totalHarga = 0;
             daftarProduk.forEach(function(value) {
                 totalHarga = totalHarga + value.hargaInt;
             });
