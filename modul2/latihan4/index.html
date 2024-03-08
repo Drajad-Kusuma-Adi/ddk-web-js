@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Alamat Pengiriman</title>
+</head>
+
+
+<body>
+<script lang="javascript">
+function kirim() {
+var alamatStr = document.form.alamat.value;
+document.getElementById("outputAlamat").innerText
+= alamatStr;
+}
+</script>
+<form name="form">
+<h1>Form Alamat Pengiriman</h1>
+<hr />
+<h3>Masukkan Alamat Pengiriman:</h3>
+<textarea name="alamat" rows="3"
+cols="30"></textarea>
+<br /><br />
+<input type="button" value="KIRIM" onclick="kirim()"
+/>
+<input type="reset" value="ULANG" />
+<h3>Alamat Pengiriman yang Akan Dikirim:</h3>
+<p id="outputAlamat"></p>
+</form>
+</body>
+</html>

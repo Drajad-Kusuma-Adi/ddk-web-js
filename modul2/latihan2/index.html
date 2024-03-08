@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pilih Metode Pembayaran</title>
+</head>
+<body>
+<script lang="javascript">
+const pilihMetodePembayaran = function (form) {
+var metode = "";
+if (form.metode_pembayaran.value == "transfer") {
+metode = "Transfer Bank";
+} else if (form.metode_pembayaran.value ==
+"kartu_kredit") {
+metode = "Kartu Kredit";
+} else if (form.metode_pembayaran.value ==
+"e_wallet") {
+metode = "E-Wallet";
+} else {
+metode = "Belum dipilih";
+}
+alert('Anda telah memilih metode pembayaran: ' +
+metode);
+}
+</script>
+<form>
+<h1>Pilih Metode Pembayaran:</h1>
+<hr />
+<p><input type="radio" value="transfer"
+name="metode_pembayaran" />Transfer Bank</p>
+<p><input type="radio" value="kartu_kredit"
+
+5
+name="metode_pembayaran" />Kartu Kredit</p>
+<p><input type="radio" value="e_wallet"
+name="metode_pembayaran" />E-Wallet</p>
+<hr />
+<p>
+<input type="button" value="CONFIRM"
+onclick="pilihMetodePembayaran(this.form)" />
+<input type="reset" value="RESET" />
+</p>
+</form>
+</body>
+</html>

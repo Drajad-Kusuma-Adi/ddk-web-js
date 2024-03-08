@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <body class="poppins-regular">
+    <header class="container-fluid bg-primary mb-4 p-3">
+        <a class="navbar-brand" href=""><h1 class="text-white">E-Commerce</h1></a>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-12 col-lg 6">
+                <form onsubmit="addProduk(event)">
+                    <div class="my-3">
+                        <label class="form-label" for="nama">Nama Produk</label>
+                        <input class="form-control" placeholder="Masukkan nama produk..." type="text" name="nama" id="nama">
+                    </div>
+                    <div class="my-3">
+                        <label class="form-label" for="harga">Harga Produk</label>
+                        <input class="form-control" placeholder="Masukkan harga produk..." type="number" name="harga" id="harga">
+                    </div>
+                    <div class="my-3">
+                        <label class="form-label" for="satuan">Mata Uang</label>
+                        <select class="form-select" name="satuan" id="satuan">
+                            <option value="ar-SA" class="dropdown-item">Arabic (Saudi Arabia)</option>
+                            <option value="bn-BD" class="dropdown-item">Bangla (Bangladesh)</option>
+                            <option value="bn-IN" class="dropdown-item">Bangla (India)</option>
+                            <option value="cs-CZ" class="dropdown-item">Czech (Czech Republic)</option>
+                            <option value="da-DK" class="dropdown-item">Danish (Denmark)</option>
+                            <option value="de-AT" class="dropdown-item">Austrian German</option>
+                            <option value="de-CH" class="dropdown-item">Swiss German</option>
+                            <option value="de-DE" class="dropdown-item">Standard German (Germany)</option>
+                            <option value="el-GR" class="dropdown-item">Modern Greek</option>
+                            <option value="en-AU" class="dropdown-item">Australian English</option>
+                            <option value="en-CA" class="dropdown-item">Canadian English</option>
+                            <option value="en-GB" class="dropdown-item">British English</option>
+                            <option value="en-IE" class="dropdown-item">Irish English</option>
+                            <option value="en-IN" class="dropdown-item">Indian English</option>
+                            <option value="en-NZ" class="dropdown-item">New Zealand English</option>
+                            <option value="en-US" class="dropdown-item">US English</option>
+                            <option value="en-ZA" class="dropdown-item">English (South Africa)</option>
+                            <option value="es-AR" class="dropdown-item">Argentine Spanish</option>
+                            <option value="es-CL" class="dropdown-item">Chilean Spanish</option>
+                            <option value="es-CO" class="dropdown-item">Colombian Spanish</option>
+                            <option value="es-ES" class="dropdown-item">Castilian Spanish (Central-Northern Spain)</option>
+                            <option value="es-MX" class="dropdown-item">Mexican Spanish</option>
+                            <option value="es-US" class="dropdown-item">American Spanish</option>
+                            <option value="fi-FI" class="dropdown-item">Finnish (Finland)</option>
+                            <option value="fr-BE" class="dropdown-item">Belgian French</option>
+                            <option value="fr-CA" class="dropdown-item">Canadian French</option>
+                            <option value="fr-CH" class="dropdown-item">Swiss French</option>
+                            <option value="fr-FR" class="dropdown-item">Standard French (France)</option>
+                            <option value="he-IL" class="dropdown-item">Hebrew (Israel)</option>
+                            <option value="hi-IN" class="dropdown-item">Hindi (India)</option>
+                            <option value="hu-HU" class="dropdown-item">Hungarian (Hungary)</option>
+                            <option value="id-ID" class="dropdown-item" selected>Indonesian (Indonesia)</option>
+                            <option value="it-CH" class="dropdown-item">Swiss Italian</option>
+                            <option value="it-IT" class="dropdown-item">Standard Italian (Italy)</option>
+                            <option value="ja-JP" class="dropdown-item">Japanese (Japan)</option>
+                            <option value="ko-KR" class="dropdown-item">Korean (Republic of Korea)</option>
+                            <option value="nl-BE" class="dropdown-item">Belgian Dutch</option>
+                            <option value="nl-NL" class="dropdown-item">Standard Dutch (Netherlands)</option>
+                            <option value="no-NO" class="dropdown-item">Norwegian (Norway)</option>
+                            <option value="pl-PL" class="dropdown-item">Polish (Poland)</option>
+                            <option value="pt-BR" class="dropdown-item">Brazilian Portuguese</option>
+                            <option value="pt-PT" class="dropdown-item">European Portuguese (Portugal)</option>
+                            <option value="ro-RO" class="dropdown-item">Romanian (Romania)</option>
+                            <option value="ru-RU" class="dropdown-item">Russian (Russian Federation)</option>
+                            <option value="sk-SK" class="dropdown-item">Slovak (Slovakia)</option>
+                            <option value="sv-SE" class="dropdown-item">Swedish (Sweden)</option>
+                            <option value="ta-IN" class="dropdown-item">Indian Tamil</option>
+                            <option value="ta-LK" class="dropdown-item">Sri Lankan Tamil</option>
+                            <option value="th-TH" class="dropdown-item">Thai (Thailand)</option>
+                            <option value="tr-TR" class="dropdown-item">Turkish (Turkey)</option>
+                            <option value="zh-CN" class="dropdown-item">Mainland China (Simplified)</option>
+                            <option value="zh-HK" class="dropdown-item">Hong Kong (Traditional)</option>
+                            <option value="zh-TW" class="dropdown-item">Taiwan (Traditional)</option>
+                        </select>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                    </form>
+            </div>
+            <div class="col-12 col-lg 6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Nama Produk</th>
+                            <th scope="col">Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelProduk">
+                    </tbody>
+                </table>
+                <p id="persenDiskon"></p>
+                <p id="totalHarga"></p>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        let daftarProduk = [];
+        let diskon = 0;
+        let totalHarga = 0;
+        let satuan = "";
+        let mataUang = "";
+
+        function cekDiskon() {
+            switch (true) {
+                case daftarProduk.length > 9:
+                    diskon = 20
+                    break;
+                case daftarProduk.length > 7:
+                    diskon = 10
+                    break;
+                case daftarProduk.length > 3:
+                    diskon = 5
+                    break;
+                default:
+                    diskon = 0
+                    break;
+            }
+        }
+
+        function hitungTotalHarga() {
+            totalHarga = 0;
+            daftarProduk.forEach(function(value) {
+                totalHarga = totalHarga + value.hargaInt;
+            });
+            totalHarga = totalHarga - (totalHarga * diskon / 100);
+        }
+
+        function loadTabel() {
+            const table = document.querySelector("#tabelProduk");
+            if (daftarProduk.length === 0) {
+                table.innerHTML = "<tr><td colspan='3'><p class='text-center'>Tidak ada produk, tambahkan produk menggunakan isian di samping</p></td></tr>";
+            } else {
+                table.innerHTML = "";
+                daftarProduk.forEach(function(value, index) {
+
+                    const tr = document.createElement("tr");
+
+                    const th = document.createElement("th");
+                    th.setAttribute("scope", "row");
+                    th.textContent = index + 1;
+
+                    const tdNama = document.createElement("td");
+                    tdNama.textContent = value.nama;
+
+                    const tdHarga = document.createElement("td");
+                    tdHarga.textContent = value.harga;
+
+                    const tdSatuan = document.createElement("td");
+                    tdSatuan.textContent = value.satuan;
+
+                    const tdDelete = document.createElement("button");
+                    tdDelete.classList.add("btn", "btn-danger");
+                    tdDelete.setAttribute("index", index);
+                    tdDelete.setAttribute("onclick", "deleteProduk(event)");
+                    tdDelete.innerHTML = 'Delete';
+
+                    tr.appendChild(th);
+                    tr.appendChild(tdNama);
+                    tr.appendChild(tdHarga);
+                    tr.appendChild(tdSatuan);
+                    tr.appendChild(tdDelete);
+
+                    table.appendChild(tr);
+                });
+            }
+            cekDiskon();
+            hitungTotalHarga();
+            document.querySelector("#persenDiskon").textContent = "Diskon : " + diskon + "%";
+            document.querySelector("#totalHarga").textContent = "Total Harga : " + totalHarga.toLocaleString(satuan, { style: "currency", currency: mataUang });
+        }
+        loadTabel();
+
+        function getCurrency(localeString) {
+            switch (localeString) {
+                case 'ar-SA':
+                return 'SAR'; // Saudi Riyal
+                case 'bn-BD':
+                case 'bn-IN':
+                return 'BDT'; // Bangladeshi Taka
+                case 'cs-CZ':
+                return 'CZK'; // Czech Koruna
+                case 'da-DK':
+                return 'DKK'; // Danish Krone
+                case 'de-AT':
+                case 'de-CH':
+                case 'de-DE':
+                return 'EUR'; // Euro
+                case 'el-GR':
+                return 'EUR'; // Euro
+                case 'en-AU':
+                case 'en-NZ':
+                return 'AUD'; // Australian Dollar
+                case 'en-CA':
+                case 'en-US':
+                case 'en-ZA':
+                return 'USD'; // US Dollar
+                case 'en-GB':
+                case 'en-IE':
+                return 'GBP'; // British Pound
+                case 'en-IN':
+                return 'INR'; // Indian Rupee
+                case 'es-AR':
+                case 'es-CL':
+                case 'es-CO':
+                case 'es-ES':
+                case 'es-MX':
+                case 'es-US':
+                return 'EUR'; // Euro
+                case 'fi-FI':
+                return 'EUR'; // Euro
+                case 'fr-BE':
+                case 'fr-CA':
+                case 'fr-CH':
+                case 'fr-FR':
+                return 'EUR'; // Euro
+                case 'he-IL':
+                return 'ILS'; // Israeli Shekel
+                case 'hi-IN':
+                return 'INR'; // Indian Rupee
+                case 'hu-HU':
+                return 'HUF'; // Hungarian Forint
+                case 'id-ID':
+                return 'IDR'; // Indonesian Rupiah
+                case 'it-CH':
+                case 'it-IT':
+                return 'EUR'; // Euro
+                case 'ja-JP':
+                return 'JPY'; // Japanese Yen
+                case 'ko-KR':
+                return 'KRW'; // South Korean Won
+                case 'nl-BE':
+                case 'nl-NL':
+                return 'EUR'; // Euro
+                case 'no-NO':
+                return 'NOK'; // Norwegian Krone
+                case 'pl-PL':
+                return 'PLN'; // Polish Złoty
+                case 'pt-BR':
+                case 'pt-PT':
+                return 'EUR'; // Euro
+                case 'ro-RO':
+                return 'RON'; // Romanian Leu
+                case 'ru-RU':
+                return 'RUB'; // Russian Ruble
+                case 'sk-SK':
+                return 'EUR'; // Euro
+                case 'sv-SE':
+                return 'SEK'; // Swedish Krona
+                case 'ta-IN':
+                case 'ta-LK':
+                return 'LKR'; // Sri Lankan Rupee
+                case 'th-TH':
+                return 'THB'; // Thai Baht
+                case 'tr-TR':
+                return 'TRY'; // Turkish Lira
+                case 'zh-CN':
+                return 'CNY'; // Chinese Yuan
+                case 'zh-HK':
+                return 'HKD'; // Hong Kong Dollar
+                case 'zh-TW':
+                return 'TWD'; // New Taiwan Dollar
+                default:
+                return ''; // Unknown currency
+            }
+        }
+
+        function addProduk(event) {
+            event.preventDefault();
+
+            const produk = {
+                "nama": event.target.nama.value,
+                "hargaInt": parseFloat(event.target.harga.value),
+                "harga": parseFloat(event.target.harga.value).toLocaleString(event.target.satuan.value, { style: "currency", currency: getCurrency(event.target.satuan.value)}),
+                "satuan": event.target.satuan.value
+            };
+
+            satuan = event.target.satuan.value;
+            mataUang = getCurrency(event.target.satuan.value);
+
+            daftarProduk.push(produk);
+
+            loadTabel();
+        }
+
+        function deleteProduk(event) {
+            event.preventDefault();
+
+            const index = event.target.getAttribute("index");
+            daftarProduk.splice(index - 1, 1);
+
+            loadTabel();
+        }
+    </script>
+  </html>

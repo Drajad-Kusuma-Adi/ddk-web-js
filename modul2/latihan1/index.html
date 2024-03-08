@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Form Pengiriman</title>
+<script language="JavaScript">
+function kirimData() {
+var nama = document.formPengiriman.nama.value;
+var alamat =
+document.formPengiriman.alamat.value;
+var kota = document.formPengiriman.kota.value;
+var kodePos =
+document.formPengiriman.kode_pos.value;
+// Menetapkan nilai input ke elemen output
+document.getElementById("outputNama").innerText =
+"Nama: " + nama;
+document.getElementById("outputAlamat").innerText
+= "Alamat: " + alamat;
+document.getElementById("outputKota").innerText =
+"Kota: " + kota;
+document.getElementById("outputKodePos").innerText = "Kode Pos: " + kodePos;
+}
+</script>
+</head>
+<body>
+<form name="formPengiriman">
+<h2>Detail Pengiriman</h2>
+<pre>
+Nama : <input type="text" size="25" name="nama">
+Alamat : <input type="text" size="25" name="alamat">
+Kota : <input type="text" size="25" name="kota">
+Kode Pos : <input type="text" size="25"
+name="kode_pos">
+</pre>
+<input type="button" value="Kirim"
+onclick="kirimData()" />
+<input type="reset" value="Ulang" />
+</form>
+<div id="output">
+<h2>Hasil Pengiriman</h2>
+<p id="outputNama"></p>
+<p id="outputAlamat"></p>
+<p id="outputKota"></p>
+<p id="outputKodePos"></p>
+</div>
+
+
+</body>
+</html>

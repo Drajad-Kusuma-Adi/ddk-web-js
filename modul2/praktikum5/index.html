@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikum 5</title>
+</head>
+<body>
+  <script>
+    // Constructor untuk biodata siswa SMK
+    function student(name, age, grade, hobbies) {
+      this.name = name;
+      this.age = age;
+      this.grade = grade;
+      this.hobbies = hobbies;
+      this.displayInfo = function() {
+        console.log("Nama: " + this.name);
+        console.log("Usia: " + this.age);
+        console.log("Kelas: " + this.grade);
+        console.log("Hobi: " + this.hobbies.join(", "));
+      }
+    }
+    // Menampilkan informasi siswa
+    const friends = [
+      {
+        name: "Abiyoga Permana Chandra",
+        age: 16,
+        grade: "X RPL B",
+        hobbies: ["programming", "chess"],
+      },
+      {
+        name: "Emmanuel Jason",
+        age: 16,
+        grade: "X RPL B",
+        hobbies: ['programming', 'badminton'],
+      },
+      {
+        name: "Muhammad Athaillah Deva Ramadhan",
+        age: 16,
+        grade: "X RPL B",
+        hobbies: ['julian', 'mobile legends'],
+      },
+      {
+        name: "Akmal Eka Firlana",
+        age: 16,
+        grade: "X RPL B",
+        hobbies: ['reading', 'design'],
+      },
+      {
+        name: "Rama Raditya Subakti",
+        age: 16,
+        grade: "X RPL B",
+        hobbies: ['anime', 'breaking bad'],
+      },
+      {
+        name: "Fabio Mana'Ahil Gani Akbar",
+        age: 16,
+        grade: "X RPL B",
+        hobbies: ['programming', 'designing'],
+      },
+      {
+        name: "Arvand Cahil",
+        age: 16,
+        grade: "X RPL B",
+        hobbies: ['programming', 'basketball'],
+      }
+    ];
+    let murid = null;
+    for (let i = 0; i < friends.length; i++) {
+      murid = new student(friends[i].name, friends[i].age, friends[i].grade, friends[i].hobbies);
+      murid.displayInfo();
+    }
+  </script>
+</body>
+</html>

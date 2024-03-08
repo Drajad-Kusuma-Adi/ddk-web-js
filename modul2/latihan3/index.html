@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Pilih Produk</title>
+</head>
+<body>
+<form>
+<h1>Pilih Produk yang Ingin Dibeli:</h1>
+<hr>
+<label><input type="checkbox" value="ON" name="baju">
+Baju</label><br>
+<label><input type="checkbox" value="ON"
+name="celana"> Celana</label><br>
+<label><input type="checkbox" value="ON"
+name="sepatu"> Sepatu</label><br>
+<hr>
+<input type="button" value="CONFIRM"
+onclick="pilihProduk(this.form)">
+
+6
+<input type="reset" value="RESET">
+</form>
+<script>
+let pilihProduk = (form) => {
+var produk = [];
+if (form.baju.checked == true) {
+produk.push("Baju");
+}
+if (form.celana.checked == true) {
+produk.push("Celana");
+}
+if (form.sepatu.checked == true) {
+produk.push("Sepatu");
+}
+if (produk.length === 0) {
+alert('Silakan pilih setidaknya satu produk!');
+} else {
+alert('Anda telah memilih produk: ' +
+produk.join(', '));
+}
+}
+</script>
+</body>
+</html>

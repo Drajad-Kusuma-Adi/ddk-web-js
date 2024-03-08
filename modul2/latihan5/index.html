@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Pilih Produk</title>
+</head>
+<body>
+
+
+<script lang="javascript">
+function pilihProduk(form) {
+var produk = form.produk.value;
+document.getElementById("outputProduk").innerText
+= "Anda memilih produk: " + produk;
+}
+</script>
+<form name="form">
+<h1>Pilih Produk yang Ingin Dibeli:</h1>
+<h3>Silakan pilih produk yang Anda inginkan:</h3>
+<select name="produk" size="1">
+<option value="Baju">Baju</option>
+<option value="Celana">Celana</option>
+<option value="Sepatu">Sepatu</option>
+<option value="Tas">Tas</option>
+</select>
+<br /><br />
+<input type="button" value="KIRIM"
+onclick="pilihProduk(this.form)" />
+<input type="reset" value="ULANG" />
+<h3>Produk yang Anda Pilih:</h3>
+<p id="outputProduk"></p>
+</form>
+</body>
+</html>
