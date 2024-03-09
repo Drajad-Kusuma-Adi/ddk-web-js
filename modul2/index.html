@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prociono&family=Rakkas&display=swap" rel="stylesheet">
+  <title>E-Commerce - Formulir Pendaftaran</title>
+  <link rel="shortcut icon" href="auxilliary.svg" type="image/x-icon">
+</head>
+<body class="flex lg:overflow-hidden" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: normal;">
+  <aside class="h-[100vh] w-[40vw] hidden lg:flex lg:justify-center lg:items-center" style="background-image: url(hero.svg); background-repeat: no-repeat; background-position: center; background-size: cover;">
+    <p class="text-8xl text-white" style="font-family: Rakkas, serif;">A R E N A</p>
+  </aside>
+  <section class="p-8 w-[100vw] lg:w-[60vw]">
+    <header>
+      <p class="text-4xl font-semibold" style="font-family: 'Prociono', serif;">Pembelian Produk</p>
+    </header>
+    <br>
+    <hr class="border-2 border-black">
+    <br>
+    <form id="formulir">
+      <main>
+        <p class="text-3xl font-semibold">Informasi Pribadi</p>
+        <br>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <div>
+              <input type="text" name="nama" id="nama" class="border-2 border-gray-300 p-4 transition duration-200 hover:border-black focus:outline-none" placeholder="Nama Lengkap">
+            </div>
+            <br>
+            <div>
+              <p class="text-2xl mb-2">Jenis Kelamin</p>
+              <span class="pe-2">
+                <input type="radio" name="jk" id="pria" value="Pria" class="opacity-50 hover:cursor-pointer">
+                <label class="hover:cursor-pointer" for="pria">Pria</label>
+              </span>
+              <span class="pe-2">
+                <input type="radio" name="jk" id="wanita" value="Wanita" class="opacity-50 hover:cursor-pointer">
+                <label class="hover:cursor-pointer" for="wanita">Wanita</label>
+              </span>
+            </div>
+            <br>
+            <div>
+              <p class="text-2xl mb-2">Kota</p>
+              <div class="border border-gray-300 w-fit transition duration-200 hover:border-black">
+                <select name="kota" id="kota" class="text-sm outline-none w-60 hover:cursor-pointer" style="border: 10px solid transparent;">
+                  <option class="hidden" selected>Pilih Kota</option>
+                  <option value="null" class="cities">Banda Aceh</option>
+                  <option value="null" class="cities">Langsa</option>
+                  <option value="null" class="cities">Lhokseumawe</option>
+                  <option value="null" class="cities">Sabang</option>
+                  <option value="null" class="cities">Subulussalam</option>
+                  <option value="null" class="cities">Denpasar</option>
+                  <option value="null" class="cities">Pangkalpinang</option>
+                  <option value="null" class="cities">Cilegon</option>
+                  <option value="null" class="cities">Serang</option>
+                  <option value="null" class="cities">Tangerang Selatan</option>
+                  <option value="null" class="cities">Tangerang</option>
+                  <option value="null" class="cities">Bengkulu</option>
+                  <option value="null" class="cities">Yogyakarta</option>
+                  <option value="null" class="cities">Gorontalo</option>
+                  <option value="null" class="cities">Jakarta Barat</option>
+                  <option value="null" class="cities">Jakarta Pusat</option>
+                  <option value="null" class="cities">Jakarta Selatan</option>
+                  <option value="null" class="cities">Jakarta Timur</option>
+                  <option value="null" class="cities">Jakarta Utara</option>
+                  <option value="null" class="cities">Sungai Penuh</option>
+                  <option value="null" class="cities">Jambi</option>
+                  <option value="null" class="cities">Bandung</option>
+                  <option value="null" class="cities">Bekasi</option>
+                  <option value="null" class="cities">Bogor</option>
+                  <option value="null" class="cities">Cimahi</option>
+                  <option value="null" class="cities">Cirebon</option>
+                  <option value="null" class="cities">Depok</option>
+                  <option value="null" class="cities">Sukabumi</option>
+                  <option value="null" class="cities">Tasikmalaya</option>
+                  <option value="null" class="cities">Banjar</option>
+                  <option value="null" class="cities">Magelang</option>
+                  <option value="null" class="cities">Pekalongan</option>
+                  <option value="null" class="cities">Salatiga</option>
+                  <option value="null" class="cities">Semarang</option>
+                  <option value="null" class="cities">Surakarta</option>
+                  <option value="null" class="cities">Tegal</option>
+                  <option value="null" class="cities">Batu</option>
+                  <option value="null" class="cities">Blitar</option>
+                  <option value="null" class="cities">Kediri</option>
+                  <option value="null" class="cities">Madiun</option>
+                  <option value="null" class="cities">Malang</option>
+                  <option value="null" class="cities">Mojokerto</option>
+                  <option value="null" class="cities">Pasuruan</option>
+                  <option value="null" class="cities">Probolinggo</option>
+                  <option value="null" class="cities">Surabaya</option>
+                  <option value="null" class="cities">Pontianak</option>
+                  <option value="null" class="cities">Singkawang</option>
+                  <option value="null" class="cities">Banjarbaru</option>
+                  <option value="null" class="cities">Banjarmasin</option>
+                  <option value="null" class="cities">Palangka Raya</option>
+                  <option value="null" class="cities">Balikpapan</option>
+                  <option value="null" class="cities">Bontang</option>
+                  <option value="null" class="cities">Samarinda</option>
+                  <option value="null" class="cities">Nusantara</option>
+                  <option value="null" class="cities">Tarakan</option>
+                  <option value="null" class="cities">Batam</option>
+                  <option value="null" class="cities">Tanjungpinang</option>
+                  <option value="null" class="cities">Bandar Lampung</option>
+                  <option value="null" class="cities">Metro</option>
+                  <option value="null" class="cities">Ternate</option>
+                  <option value="null" class="cities">Tidore</option>
+                  <option value="null" class="cities">Ambon</option>
+                  <option value="null" class="cities">Tual</option>
+                  <option value="null" class="cities">Bima</option>
+                  <option value="null" class="cities">Mataram</option>
+                  <option value="null" class="cities">Kupang</option>
+                  <option value="null" class="cities">Sorong</option>
+                  <option value="null" class="cities">Maluku</option>
+                  <option value="null" class="cities">Dumai</option>
+                  <option value="null" class="cities">Pekanbaru</option>
+                  <option value="null" class="cities">Makassar</option>
+                  <option value="null" class="cities">Palopo</option>
+                  <option value="null" class="cities">Parepare</option>
+                  <option value="null" class="cities">Palu</option>
+                  <option value="null" class="cities">Baubau</option>
+                  <option value="null" class="cities">Kendari</option>
+                  <option value="null" class="cities">Bitung</option>
+                  <option value="null" class="cities">Kotamobagu</option>
+                  <option value="null" class="cities">Manado</option>
+                  <option value="null" class="cities">Tomohon</option>
+                  <option value="null" class="cities">Bukittinggi</option>
+                  <option value="null" class="cities">Padang</option>
+                  <option value="null" class="cities">Padang Panjang</option>
+                  <option value="null" class="cities">Pariaman</option>
+                  <option value="null" class="cities">Payakumbuh</option>
+                  <option value="null" class="cities">Sawahlunto</option>
+                  <option value="null" class="cities">Solok</option>
+                  <option value="null" class="cities">Lubuklinggau</option>
+                  <option value="null" class="cities">Pagar Alam</option>
+                  <option value="null" class="cities">Palembang</option>
+                  <option value="null" class="cities">Prabumulih</option>
+                  <option value="null" class="cities">Binjai</option>
+                  <option value="null" class="cities">Gunungsitoli</option>
+                  <option value="null" class="cities">Medan</option>
+                  <option value="null" class="cities">Padangsidimpuan</option>
+                  <option value="null" class="cities">Pematangsiantar</option>
+                  <option value="null" class="cities">Sibolga</option>
+                  <option value="null" class="cities">Tanjungbalai</option>
+                  <option value="null" class="cities">Tebing Tinggi</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div>
+            <textarea name="alamat" id="alamat" placeholder="Alamat Pengiriman" class="text-sm border border-grey-300 transition duration-200 hover:border-black w-60 h-[25vh] p-4 focus:outline-none"></textarea>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <p class="text-3xl font-semibold">Informasi Pesanan</p>
+        <br>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <div>
+              <p class="text-2xl mb-2">Pilih Produk</p>
+              <div class="border border-gray-300 w-fit transition duration-200 hover:border-black">
+                <select name="produk" id="produk" class="text-sm outline-none w-60 hover:cursor-pointer" style="border: 10px solid transparent;">
+                  <option class="hidden" selected>Pilih Produk</option>
+                  <option value="Jaket">Jaket</option>
+                  <option value="Kaos">Kaos</option>
+                  <option value="Kemeja">Kemeja</option>
+                  <option value="Celana">Celana</option>
+                  <option value="Sepatu">Sepatu</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            <div>
+              <p class="text-2xl mb-2">Metode Pembayaran</p>
+              <div>
+                <input class="opacity-50 my-2.5 me-2.5 hover:cursor-pointer" type="checkbox" name="pembayaran" id="bank" value="Transfer Bank">
+                <label class="hover:cursor-pointer" for="bank">Transfer Bank</label>
+                <br>
+                <input class="opacity-50 my-2.5 me-2.5 hover:cursor-pointer" type="checkbox" name="pembayaran" id="cod" value="Cash on Delivery">
+                <label class="hover:cursor-pointer" for="cod">Cash on Delivery</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <textarea name="catatan" id="catatan" placeholder="Catatan Tambahan" class="text-sm border border-grey-300 transition duration-200 hover:border-black w-60 h-[25vh] p-4 focus:outline-none"></textarea>
+          </div>
+        </div>
+      </main>
+      <br>
+      <footer>
+        <input type="submit" class="text-center transition duration-200 bg-black text-white px-8 py-4 rounded-full m-4 hover:cursor-pointer hover:bg-gray-600" value="Konfirmasi">
+        <input type="reset" class="text-center transition duration-200 bg-white text-black border border-black px-8 py-4 rounded-full m-4 hover:cursor-pointer hover:bg-gray-300" value="Reset">
+      </footer>
+    </form>
+  </section>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    const cities = document.querySelectorAll(".cities");
+    cities.forEach((city) => {
+      city.value = city.textContent;
+    })
+  </script>
+  <script>
+    // TODO: form processing
+  </script>
+</body>
+</html>
