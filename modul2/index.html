@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prociono&family=Rakkas&display=swap" rel="stylesheet">
-  <title>E-Commerce - Formulir Pendaftaran</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prociono&family=Rakkas&display=swap" rel="stylesheet">
+  <title>E-Commerce - Formulir Pembelian</title>
   <link rel="shortcut icon" href="auxilliary.svg" type="image/x-icon">
 </head>
 <body class="flex lg:overflow-hidden" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: normal;">
@@ -27,17 +27,17 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <div>
-              <input type="text" name="nama" id="nama" class="border-2 border-gray-300 p-4 transition duration-200 hover:border-black focus:outline-none" placeholder="Nama Lengkap">
+              <input required type="text" name="nama" id="nama" class="border-2 border-gray-300 p-4 transition duration-200 hover:border-black focus:outline-none" placeholder="Nama Lengkap">
             </div>
             <br>
             <div>
               <p class="text-2xl mb-2">Jenis Kelamin</p>
               <span class="pe-2">
-                <input type="radio" name="jk" id="pria" value="Pria" class="opacity-50 hover:cursor-pointer">
+                <input required type="radio" name="jk" id="pria" value="Pria" class="opacity-50 hover:cursor-pointer">
                 <label class="hover:cursor-pointer" for="pria">Pria</label>
               </span>
               <span class="pe-2">
-                <input type="radio" name="jk" id="wanita" value="Wanita" class="opacity-50 hover:cursor-pointer">
+                <input required type="radio" name="jk" id="wanita" value="Wanita" class="opacity-50 hover:cursor-pointer">
                 <label class="hover:cursor-pointer" for="wanita">Wanita</label>
               </span>
             </div>
@@ -45,7 +45,7 @@
             <div>
               <p class="text-2xl mb-2">Kota</p>
               <div class="border border-gray-300 w-fit transition duration-200 hover:border-black">
-                <select name="kota" id="kota" class="text-sm outline-none w-60 hover:cursor-pointer" style="border: 10px solid transparent;">
+                <select required name="kota" id="kota" class="text-sm outline-none w-60 hover:cursor-pointer" style="border: 10px solid transparent;">
                   <option class="hidden" selected>Pilih Kota</option>
                   <option value="null" class="cities">Banda Aceh</option>
                   <option value="null" class="cities">Langsa</option>
@@ -151,7 +151,7 @@
             </div>
           </div>
           <div>
-            <textarea name="alamat" id="alamat" placeholder="Alamat Pengiriman" class="text-sm border border-grey-300 transition duration-200 hover:border-black w-60 h-[25vh] p-4 focus:outline-none"></textarea>
+            <textarea required name="alamat" id="alamat" placeholder="Alamat Pengiriman" class="text-sm border border-grey-300 transition duration-200 hover:border-black w-60 h-[25vh] p-4 focus:outline-none"></textarea>
           </div>
         </div>
         <br>
@@ -164,7 +164,7 @@
             <div>
               <p class="text-2xl mb-2">Pilih Produk</p>
               <div class="border border-gray-300 w-fit transition duration-200 hover:border-black">
-                <select name="produk" id="produk" class="text-sm outline-none w-60 hover:cursor-pointer" style="border: 10px solid transparent;">
+                <select required name="produk" id="produk" class="text-sm outline-none w-60 hover:cursor-pointer" style="border: 10px solid transparent;">
                   <option class="hidden" selected>Pilih Produk</option>
                   <option value="Jaket">Jaket</option>
                   <option value="Kaos">Kaos</option>
@@ -187,26 +187,37 @@
             </div>
           </div>
           <div>
-            <textarea name="catatan" id="catatan" placeholder="Catatan Tambahan" class="text-sm border border-grey-300 transition duration-200 hover:border-black w-60 h-[25vh] p-4 focus:outline-none"></textarea>
+            <textarea required name="catatan" id="catatan" placeholder="Catatan Tambahan" class="text-sm border border-grey-300 transition duration-200 hover:border-black w-60 h-[25vh] p-4 focus:outline-none"></textarea>
           </div>
         </div>
       </main>
       <br>
       <footer>
-        <input type="submit" class="text-center transition duration-200 bg-black text-white px-8 py-4 rounded-full m-4 hover:cursor-pointer hover:bg-gray-600" value="Konfirmasi">
-        <input type="reset" class="text-center transition duration-200 bg-white text-black border border-black px-8 py-4 rounded-full m-4 hover:cursor-pointer hover:bg-gray-300" value="Reset">
+        <input required type="submit" class="text-center transition duration-200 bg-black text-white px-8 py-4 rounded-full m-4 hover:cursor-pointer hover:bg-gray-600" value="Konfirmasi">
+        <input required type="reset" class="text-center transition duration-200 bg-white text-black border border-black px-8 py-4 rounded-full m-4 hover:cursor-pointer hover:bg-gray-300" value="Reset">
       </footer>
     </form>
   </section>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    const cities = document.querySelectorAll(".cities");
-    cities.forEach((city) => {
-      city.value = city.textContent;
+    document.addEventListener('DOMContentLoaded', function() {
+      const cities = document.querySelectorAll(".cities");
+      cities.forEach(function(city) {
+        city.value = city.textContent;
+      })
+
+      document.getElementById("formulir").addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const data = new Map(formData.entries());
+        for (const [key, value] of data) {
+          localStorage.setItem('tugasjs' + key, value);
+        }
+
+        location.pathname = 'ddk-web-js/modul2/output.html';
+      })
     })
   </script>
-  <script>
-    // TODO: form processing
-  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

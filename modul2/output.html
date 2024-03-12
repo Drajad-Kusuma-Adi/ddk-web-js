@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prociono&family=Rakkas&display=swap" rel="stylesheet">
+  <title>E-Commerce - Hasil Pembelian</title>
+  <link rel="shortcut icon" href="auxilliary.svg" type="image/x-icon">
+</head>
+<body class="flex justify-center items-center lg:h-[100vh]" style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: normal; background-color: #DCDCDC;">
+  <section class="md:p-4 lg:p-8 bg-white m-8 flex flex-col" style="box-shadow: -40px 40px 10px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 0, 0, 0.15);"">
+    <div class="p-4">
+      <p style="font-family: 'Prociono', serif;" class="text-4xl">Terimakasih</p>
+      <p style="font-family: 'Prociono', serif;" class="text-4xl">Telah Berbelanja</p>
+    </div>
+    <br>
+    <hr class="border-2 border-gray-400">
+    <br>
+    <div class="flex">
+      <div class="p-4 mx-4">
+        <p class="text-3xl font-semibold">Informasi Pribadi</p>
+        <br>
+        <p class="my-4">Nama Lengkap
+          <br>
+          <span class="opacity-50" id="nama"></span></p>
+        <hr>
+        <p class="my-4">Jenis Kelamin
+          <br>
+          <span class="opacity-50" id="jk"></span>
+        </p>
+        <hr>
+        <p class="my-4">Kota
+          <br>
+          <span class="opacity-50" id="kota"></span>
+        </p>
+        <hr>
+        <p class="my-4">Alamat Pengiriman
+          <br>
+          <span class="opacity-50" id="alamat"></span>
+        </p>
+        <hr>
+      </div>
+      <div class="p-4 mx-4 border border-2 border-gray-500 rounded-lg">
+        <p class="text-3xl font-semibold">Informasi Pesanan</p>
+        <br>
+        <p class="my-4">Produk
+          <br>
+          <span class="opacity-50" id="produk"></span>
+        </p>
+        <hr>
+        <p class="my-4">Metode Pembayaran
+          <br>
+          <span class="opacity-50" id="pembayaran"></span>
+        </p>
+        <hr>
+        <p class="my-4">Catatan Tambahan
+          <br>
+          <span class="opacity-50" id="catatan"></span>
+        </p>
+        <hr>
+      </div>
+    </div>
+    <br>
+    <br>
+    <a href="index.html" class="text-center transition duration-200 bg-black text-white px-8 py-4 rounded-full m-4 hover:cursor-pointer hover:bg-gray-600 w-fit self-center">Kembali</a>
+    <br>
+  </section>
+  <aside class="hidden lg:block">
+    <img src="auxilliary.svg" alt="auxilliary" class="object-contain w-[800px] h-[800px]">
+  </aside>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const expectedData = ['nama', 'jk', 'kota', 'alamat', 'produk', 'pembayaran', 'catatan'];
+
+      expectedData.forEach(function(data) {
+        document.getElementById(data).innerHTML = localStorage.getItem('tugasjs' + data);
+      })
+    })
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
