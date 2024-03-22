@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Latihan Event OnFocus dan OnBlur</title>
+<script>
+function masukanabsen() {
+if (document.f.iabsen.value == "") {
+alert("anda belum memasukkan absen");
+}
+}
+function masukannama() {
+if (document.f.inama.value == "") {
+alert("anda belum memasukkan nama");
+}
+}
+function masukanalamat() {
+if (document.f.ialamat.value == "") {
+alert("anda belum memasukkan alamat");
+}
+}
+function terimakasih() {
+if ((document.f.iabsen.value != "") &&
+(document.f.inama.value != "") && (document.f.ialamat.value
+!= "")) {
+alert("Terima Kasih Telah mengisi Data");
+} else {
+alert("Mohon Data Dilengkapi");
+}
+}
+</script>
+</head>
+<body>
+<h1 align="center">Latihan Event OnFocus dan OnBlur</h1>
+<hr>
+<h3 align="center">R E G I S T R A S I</h3>
+<hr>
+
+<form name="f" method="get">
+<table>
+<tr>
+<td width="31%">No. Absen</td>
+<td width="7%">:</td>
+<td width="62%"><input type="text"
+name="iabsen" size="9"
+onfocus="window.status='Silahkan Mengisi absen Anda';" onblur="masukanabsen()"></td>
+</tr>
+<tr>
+<td width="31%">Nama</td>
+<td width="7%">:</td>
+<td width="62%"><input type="text"
+name="inama" size="23"
+onfocus="window.status='Silahkan Mengisi Nama Anda';" onblur="masukannama()"></td>
+</tr>
+<tr>
+<td width="31%">Alamat</td>
+<td width="7%">:</td>
+<td width="62%"><input type="text"
+name="ialamat" size="34"
+onfocus="window.status='Silahkan Mengisi Alamat Anda';" onblur="masukanalamat()"></td>
+</tr>
+</table>
+<hr>
+<p>
+<input type="button" value="Kirim"
+onclick="terimakasih()">
+<input type="reset" value="Reset">
+</p>
+</form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Sekolah SMK Negeri 4 Malang</title>
+</head>
+<body>
+<h1>Selamat Datang di Sekolah SMK Negeri 4 Malang</h1>
+<p id="about" onmouseover="showDescription('about')"
+onmouseout="hideDescription('about')">
+Tentang Kami
+</p>
+<p id="contact" onmouseover="showDescription('contact')"
+onmouseout="hideDescription('contact')">
+Hubungi Kami
+</p>
+<p id="admission"
+onmouseover="showDescription('admission')"
+onmouseout="hideDescription('admission')">
+Penerimaan Siswa Baru
+</p>
+<div id="description">
+<!-- Ini adalah area di mana deskripsi akan
+ditampilkan -->
+</div>
+<script>
+function showDescription(section) {
+var description = "";
+switch (section) {
+case "about":
+description = "Kami adalah sekolah yang berkomitmen untuk memberikan pendidikan berkualitas kepada siswa.";
+break;
+case "contact":
+description = "Hubungi kami melalui email: info@smkgrafika.com atau telepon: 123-456-789.";
+break;
+
+case "admission":
+description = "Pendaftaran siswa barusedang dibuka. Silakan hubungi kami untuk informasi lebih lanjut.";
+break;
+default:
+description = "";
+}
+document.getElementById("description").innerHTML
+= description;
+}
+function hideDescription(section) {
+document.getElementById("description").innerHTML
+= "";
+}
+</script>
+</body>
+</html>
